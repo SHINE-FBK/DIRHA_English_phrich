@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/kaldi/code/!svn/ver/4365/trunk/egs/wsj/s5/steps/cleanup
+END
+make_utterance_fsts.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/p/kaldi/code/!svn/ver/4241/trunk/egs/wsj/s5/steps/cleanup/make_utterance_fsts.pl
+END
+find_bad_utts.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/p/kaldi/code/!svn/ver/4257/trunk/egs/wsj/s5/steps/cleanup/find_bad_utts.sh
+END

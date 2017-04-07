@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/kaldi/code/!svn/ver/4504/trunk/egs/timit/s5/local
+END
+score_combine.sh
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/p/kaldi/code/!svn/ver/4354/trunk/egs/timit/s5/local/score_combine.sh
+END
+timit_format_data.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/p/kaldi/code/!svn/ver/4504/trunk/egs/timit/s5/local/timit_format_data.sh
+END
+timit_prepare_dict.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/kaldi/code/!svn/ver/4091/trunk/egs/timit/s5/local/timit_prepare_dict.sh
+END
+timit_norm_trans.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/p/kaldi/code/!svn/ver/4091/trunk/egs/timit/s5/local/timit_norm_trans.pl
+END
+score.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/kaldi/code/!svn/ver/4091/trunk/egs/timit/s5/local/score.sh
+END
+score_basic.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/kaldi/code/!svn/ver/4323/trunk/egs/timit/s5/local/score_basic.sh
+END
+score_sclite.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/p/kaldi/code/!svn/ver/4354/trunk/egs/timit/s5/local/score_sclite.sh
+END
+run_dnn.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/p/kaldi/code/!svn/ver/4101/trunk/egs/timit/s5/local/run_dnn.sh
+END
+timit_data_prep.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/p/kaldi/code/!svn/ver/4091/trunk/egs/timit/s5/local/timit_data_prep.sh
+END

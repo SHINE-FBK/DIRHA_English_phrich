@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/p/kaldi/code/!svn/ver/4365/trunk/egs/timit/s5/conf
+END
+dev_spk.list
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/p/kaldi/code/!svn/ver/2295/trunk/egs/timit/s5/conf/dev_spk.list
+END
+fbank.conf
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/kaldi/code/!svn/ver/4166/trunk/egs/timit/s5/conf/fbank.conf
+END
+test_spk.list
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/p/kaldi/code/!svn/ver/3051/trunk/egs/timit/s5/conf/test_spk.list
+END
+mfcc.conf
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/kaldi/code/!svn/ver/2295/trunk/egs/timit/s5/conf/mfcc.conf
+END
+phones.60-48-39.map
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/p/kaldi/code/!svn/ver/2295/trunk/egs/timit/s5/conf/phones.60-48-39.map
+END
