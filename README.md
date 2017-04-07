@@ -1,4 +1,4 @@
-#Introduction:
+# Introduction:
 
 The phonetically-rich part of the DIRHA English Dataset [1,2] is a multi-microphone acoustic corpus being developed under the EC project Distant-speech Interaction for Robust Home Applications ([DIRHA](https://dirha.fbk.eu/)). The corpus is composed of real phonetically-rich sentences recorded  with 32 sample-synchronized microphones in a domestic environment. 
 
@@ -7,7 +7,7 @@ You can download the database here:
 
 The current repository  provides the related Kaldi recipe and the tools that are necessary to run a kaldi-based distant phone recognizer.. A contaminated version of the original TIMIT corpus is used for training, while test is performed with the DIRHA English wsj dataset. More information can be found in the reference papers [1,2]
 
-#How to run the recipe:
+# How to run the recipe:
 
 0) Download the dataset from here:
 
@@ -40,18 +40,19 @@ The current repository  provides the related Kaldi recipe and the tools that are
    - L. See the results by typing “./RESULTS”. Please note that the results may vary depending on: operating system, system architecture, version of kaldi
 
 
-#COMMON ISSUES:
+# COMMON ISSUES:
 - "awk:function gensub never defined”. The problem can be solved by typing the following command:  sudo apt-get install gawk
 - make sure your ~/.bashrc contains the needed kaldi paths.
-
+```
   PATH=$PATH:/home/kaldi-trunk/tools/openfst-1.3.4/bin
   PATH=$PATH:/home/kaldi-trunk/src/featbin
   PATH=$PATH:/home/kaldi-trunk/src/gmmbin
   PATH=$PATH:/home/kaldi-trunk/src/bin
   PATH=$PATH:/home/kaldi-trunk/src/nnetbin
+  ```
 
 
-#EXPERIMENTS WITH CUDA
+# EXPERIMENTS WITH CUDA
 We recommend to use a CUDA-capable GPU for the DNN experiments. Before starting the experiments we suggest to do the following checks:
 
 1. Make sure you have a cuda-capable GPU by typing “nvidia-smi”
