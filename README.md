@@ -40,7 +40,7 @@ The current repository  provides the related Kaldi recipe and the tools that are
    - L. See the results by typing “./RESULTS”. Please note that the results may vary depending on: operating system, system architecture, version of kaldi
 
 
-# COMMON ISSUES:
+# Common issues:
 - "awk:function gensub never defined”. The problem can be solved by typing the following command:  sudo apt-get install gawk
 - make sure your ~/.bashrc contains the needed kaldi paths.
 ```
@@ -52,7 +52,7 @@ The current repository  provides the related Kaldi recipe and the tools that are
   ```
 
 
-# EXPERIMENTS WITH CUDA
+# Cuda experiments
 We recommend to use a CUDA-capable GPU for the DNN experiments. Before starting the experiments we suggest to do the following checks:
 
 1. Make sure you have a cuda-capable GPU by typing “nvidia-smi”
@@ -71,7 +71,7 @@ We recommend to use a CUDA-capable GPU for the DNN experiments. Before starting 
     The result should be this: “Test PASSED”
 
 
-#References:
+# References:
 If you use the DIRHA English wsj dataset or the related baselines and tools, please cite the following papers:
 [1] M. Ravanelli, L. Cristoforetti, R. Gretter, M. Pellin, A. Sosi, M. Omologo, "The DIRHA-English corpus and related tasks for distant-speech recognition in domestic environments", in Proceedings of ASRU 2015.
 [2] M. Ravanelli, P. Svaizer, M. Omologo, "Realistic Multi-Microphone Data Simulation for Distant Speech Recognition",in Proceedings of Interspeech 2016.
