@@ -7,14 +7,13 @@
 cmd=run.pl
 stage=0
 min_lmwt=1
-max_lmwt=10
+max_lmwt=15
 mbr_scale=1.0
 iter=final
 #end configuration section.
 
 [ -f ./path.sh ] && . ./path.sh
 . parse_options.sh || exit 1;
-
 if [ $# -ne 3 ]; then
   echo "Usage: local/score.sh [--cmd (run.pl|queue.pl...)] <data-dir> <lang-dir|graph-dir> <decode-dir>"
   echo " Options:"
@@ -47,7 +46,7 @@ done
 mkdir -p $dir/scoring/log
 
 # Map reference to 39 phone classes, the silence is optional (.):
-local/timit_norm_trans.pl -i $data/stm -m $phonemap -from 48 -to 39 >$dir/scoring/stm_39phn
+local/timit_norm_trans.pl -i $data/stm -m $phonemap -from 48 -to 39 | sed 's: sil::g'  >$dir/scoring/stm_39phn
 cp $data/glm $dir/scoring/glm_39phn
 
 if [ $stage -le 0 ]; then
@@ -57,7 +56,7 @@ if [ $stage -le 0 ]; then
       lattice-align-phones $model "ark:gunzip -c $dir/lat.JOB.gz|" ark:- \| \
       lattice-to-ctm-conf --acoustic-scale=$(bc <<<"scale=8; 1/$LMWT*$mbr_scale") --lm-scale=$mbr_scale ark:- $dir/scoring/$LMWT.JOB.ctm || exit 1;
     cat $dir/scoring/$LMWT.*.ctm | sort > $dir/scoring/$LMWT.ctm
-    rm $dir/scoring/$LMWT.*.ctm
+        rm $dir/scoring/$LMWT.*.ctm
   done
 fi
 
@@ -67,7 +66,7 @@ if [ $stage -le 1 ]; then
      mkdir $dir/score_LMWT ';' \
      cat $dir/scoring/LMWT.ctm \| \
      utils/int2sym.pl -f 5 $symtab \| \
-     local/timit_norm_trans.pl -i - -m $phonemap -from 48 -to 39 '>' \
+     local/timit_norm_trans.pl -i - -m $phonemap -from 48 -to 39 '|' grep -v 'sil' '>' \
      $dir/scoring/LMWT.ctm_39phn || exit 1
 fi
 
@@ -77,3 +76,7 @@ $cmd LMWT=$min_lmwt:$max_lmwt $dir/scoring/log/score.LMWT.log \
    $hubscr -p $hubdir -V -l english -h hub5 -g $dir/scoring/glm_39phn -r $dir/score_LMWT/stm_39phn $dir/score_LMWT/ctm_39phn || exit 1;
 
 exit 0;
+
+
+
+
