@@ -11,6 +11,8 @@ The current repository  provides the related Kaldi recipe and the tools that are
 
 0) Download the dataset from here:
 
+https://dirha.fbk.eu/dirha-english-phdev-agreement
+
 1)  Make sure to have the standard TIMIT dataset available (for training purposes)
 
 2) make sure that your KALDI installation is working. Try for instance to launch “egs/TIMIT/s5/run.sh” and check whether everything is properly working.
